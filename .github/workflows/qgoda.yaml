@@ -18,14 +18,6 @@ jobs:
       - name: Build with Qgoda
         uses: gflohr/qgoda-action@main
 
-      - name: Copy _site
-        run: |
-          mkdir -p _site_copy
-          cp -r _site/* _site_copy/
-
-      - name: Output directory 
-        run: ls -lR
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/main'
