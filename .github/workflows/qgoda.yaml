@@ -20,7 +20,7 @@ jobs:
 
       # See https://github.com/peaceiris/actions-gh-pages/issues/892
       - name: Create .exists
-        run: if [ ! -e _site/.exists ]; then touch _site/.exists fi
+        run: touch _site/.exists
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
