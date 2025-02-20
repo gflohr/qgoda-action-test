@@ -18,15 +18,6 @@ jobs:
       - name: Build with Qgoda
         uses: gflohr/qgoda-action@main
 
-      - name: Print working directory
-        run: pwd
-
-      - name: List working directory
-        run: ls -lR .
-
-      - name: List site directory
-        run: ls -lR ${{ github.workspace }}/_site/*
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/main'
