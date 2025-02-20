@@ -15,6 +15,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      # We want to own the output directory so that we can create a
+      # file inside of it, see below.
+      - name: Create _site directory.
+        run: mkdir _site
+
       - name: Build with Qgoda
         uses: gflohr/qgoda-action@main
 
