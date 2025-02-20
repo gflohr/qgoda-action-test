@@ -25,7 +25,7 @@ jobs:
         run: ls -lR .
 
       - name: List site directory
-        run: ls -lR ${{ github.workspace }}/_site
+        run: ls -lR ${{ github.workspace }}/_site/.*
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
