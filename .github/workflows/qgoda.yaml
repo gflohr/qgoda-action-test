@@ -18,6 +18,10 @@ jobs:
       - name: Build with Qgoda
         uses: gflohr/qgoda-action@main
 
+      # See https://github.com/peaceiris/actions-gh-pages/issues/892
+      - name: Create .exists
+        run: if [ ! -e _site/.exists ]; then touch _site/.exists fi
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/main'
