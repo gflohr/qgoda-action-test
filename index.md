@@ -1,5 +1,5 @@
 ---
 location: /index.html
-title: The Action Test
+title: The Qgoda GitHub Action Test
 ---
-Home page!
+See https://github.com/gflohr/qgoda-action for more information!

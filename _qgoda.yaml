@@ -1,0 +1,18 @@
+exclude:
+  - /node_modules
+  - /package.json
+  - /webpack.config.js
+  - /package-lock.json
+  - /README.md
+helpers:
+  webpack: npm run start
+  browser-sync: npm run server
+paths:
+  site: _site/qgoda-action-test
+pre-build:
+  - name: webpack
+    run: npm run build
+# See https://github.com/peaceiris/actions-gh-pages/issues/892!
+post-build:
+  - name: disable-jekyll 
+    run: touch _site/qgoda-action-test/.nojekyll

@@ -1,11 +1,14 @@
 <!doctype html>
+[% USE q = Qgoda %]
 <html>
-  <head>
-	<meta charset="utf-8">
-	<title>[% asset.title | html %]</title>
-  </head>
-  <body>
-	<h1>[% asset.title | html %]</h1>
-	[% asset.content %]
-  </body>
+	<head>
+		<meta charset="utf-8">
+		<title>[% asset.title | html %]</title>
+		<link href="/e-invoice-eu[% q.bustCache('/qgoda-action-test/bundle.min.css') | url %]" rel="stylesheet">
+	</head>
+	<body>
+		<h1>[% asset.title | html %]</h1>
+		[% asset.content %]
+		<script src="/qgoda-action-test[% q.bustCache('/qgoda-action-test/bundle.min.js') | url %]" type="text/javascript"></script>
+	</body>
 </html>
